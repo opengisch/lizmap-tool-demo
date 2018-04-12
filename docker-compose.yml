@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+
+  lizmap:
+    image: jancelin/docker-lizmap:3.1.11
+    restart: "no"
+    container_name: lizmap-demo
+    volumes:
+      - ./projects:/home/files/qgis
+      - ./local_data/lizmap_var:/var/www/websig/lizmap/var
+    ports:
+      - 9980:80
+      - 9443:443
+    links:
+     - qgis-server:qgiserver
+
+  qgis-server:
+    image: jancelin/qgis-server:2.18LTR
+    container_name: qgiserver-demo
+    volumes:
+      - ./projects:/home/files/qgis
+    expose:
+      - 80

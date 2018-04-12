@@ -1,0 +1,8 @@
+# Entire .idea directory
+.idea/
+
+# Local qgis server and lizmap data
+local_data/
+
+# QGIS tmp file
+*.qgs~
