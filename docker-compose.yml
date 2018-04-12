@@ -16,6 +16,7 @@ services:
 
   qgis-server:
     image: jancelin/qgis-server:2.18LTR
+    restart: "no"
     container_name: qgiserver-demo
     volumes:
       - ./projects:/home/files/qgis
