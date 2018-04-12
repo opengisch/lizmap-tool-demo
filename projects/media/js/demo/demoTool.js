@@ -23,7 +23,6 @@ var featureInfo = new OpenLayers.Control.WMSGetFeatureInfo({
   eventListeners: {
     getfeatureinfo: function(event) {
 
-
       var mediaLink = OpenLayers.Util.urlAppend(lizUrls.media, OpenLayers.Util.getParameterString(lizUrls.params));
       var demoToolSrc = mediaLink +'&path=/media/js/demo/demoToolDialog.html';
 
@@ -80,9 +79,6 @@ var featureInfo = new OpenLayers.Control.WMSGetFeatureInfo({
     }
   }
 });
-
-
-
 
 
 lizMap.events.on({

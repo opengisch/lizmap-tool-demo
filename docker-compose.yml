@@ -8,7 +8,6 @@ services:
     container_name: lizmap-demo
     volumes:
       - ./projects:/home/files/qgis
-      - ./local_data/lizmap_var:/var/www/websig/lizmap/var
     ports:
       - 9980:80
       - 9443:443
